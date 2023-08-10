@@ -59,6 +59,27 @@ normative:
     RFC8205:
 
 informative:
+    kim2014lightweight:
+      title: "Lightweight Source Authentication and Path Validation"
+      target: "https://dl.acm.org/doi/10.1145/2619239.2626323"
+      date: 2014
+      author:
+        - Tiffany Hyun-Jin Kim
+        - Cristina Basescu
+        - Limin Jia
+        - Soo Bum Lee
+        - Yih-Chun Hu
+        - Adrian Perrig
+    legner2020epic:
+      title: "EPIC: Every Packet Is Checked in the Data Plane of a Path-Aware Internet"
+      target: "https://www.usenix.org/conference/usenixsecurity20/presentation/legner"
+      date: 2020
+      author:
+        - Markus Legner
+        - Tobias Klenze
+        - Marc Wyss
+        - Christoph Sprenger
+        - Adrian Perrig
     X.680:
       title: "Information technology -- Abstract Syntax Notation One (ASN.1): Specification of basic notation"
       target: "https://itu.int/rec/T-REC-X.680-202102-I/en"
@@ -73,18 +94,6 @@ informative:
       author:
         - ins: ITU-T
       seriesinfo: "Recommendation ITU-T X.690"
-    kim2014lightweight:
-      title: "kim2014lightweight"
-      target: ""
-      date: 2014
-      author:
-        - kim
-    legner2020epic:
-      title: "legner2020epic"
-      target: ""
-      date: 2020
-      author:
-        - ledger
 
 
 --- abstract
