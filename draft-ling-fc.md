@@ -107,7 +107,7 @@ We assume a dynamic member management mechanism exists, an upgraded AS can join 
 
 # The specification of FC
 
-Suppose that AS C receives a BGP UPDATE P:S <-- A <-- C, if AS C prefers to further advertise this path to its neighbor AS D, AS C computes F{C,D,P} to authenticate the preference on the C <-- D hop as follows:
+Suppose that AS C receives a BGP UPDATE P:S <- A <- C, if AS C prefers to further advertise this path to its neighbor AS D, AS C computes F{C,D,P} to authenticate the preference on the C <- D hop as follows:
 
 FC{C,D,P} = {H(C,D,P,Ver)_{SigC}, C, D, Ver}
 
@@ -118,7 +118,6 @@ where $H$ is a (public) secure one-way hash function, $C$ and $D$ are endpoints 
 An FC-Tag attribute is added to the BGP_UPDATE message, the upgraded AS should additionally set the Attr.VERSION and Attr.VALUE when receiving a BGP_UPDATE message. Then, the AS forward the BGP_UPDATE message and generate FC with Attr.VERSION.
 
 ~~~~~~
-
 +---------------------------------------------+
 |     +---------------+     +------------+    |
 |     |  Attr.VERSION |     | Attr.VALUE |    |
@@ -126,7 +125,6 @@ An FC-Tag attribute is added to the BGP_UPDATE message, the upgraded AS should a
 |     |    Version    |     |   Random   |    |
 |     +---------------+     +------------+    |
 +---------------------------------------------+
-
 ~~~~~~
 {: #fig1: title="The structure of the FC-Tag attribute"}
 
@@ -139,17 +137,10 @@ When next-hop AS is upgraded, the AS only needs to set the Attr.VERSION of FC-Ta
 
 When next-hop AS fails to deploy the mechanism, the AS should also generate a random number and set it to the Attr.VALUE of FC-Tag attribute in BGP-UPDATE message. The AS who gets the random number from the BGP-UPDATE message can require FC from the AS.
 
-<!-- ~~~~~~
-+------+     +------+     +------+     +------+
-| AS A | <-- | AS B | <-- | AS C | <-- | AS D |
-+------+     +------+     +------+     +------+
-~~~~~~ 
-{: #fig2 title="The structure of the FC-Tag attribute"}
--->
-
 
 # Revoke the invalid FC
-To avoid an invalid FC being used to announce a BGP_UPDATE message, AS should revoke the FC when revoking the related BGP path, and the revocation message should be synchronized to all ASes
+
+To avoid an invalid FC being used to announce a BGP_UPDATE message, AS should revoke the FC when revoking the related BGP path, and the revocation message should be synchronized to all ASes.
 
 ## Notations
 
@@ -184,11 +175,13 @@ where v is the version number of IRVV.
 
 
 ## Broadcast the revocation message
+
 When AS wants to revocate an invalid FC,
 
 M_{revocation}={Version,Revote-version}_{Sig} where $Version$ is the version number of the revocation message, $Revote-version$ is the version number of revoted FC, and $Sig$ is the signature of AS who construct the revocation message.
 
 ## Synchronize the missed messages
+
 Considering that some ASes may miss the revocation message during the message broadcast phase, a lightweight version-based Consistency Check Protocol (CCP) is used to synchronize the missed revocation messages. The CCP includes two parts: intra-group CPP and inter-group CPP.
 
 In each period v, ASes will broadcast their local Incremental BVV, i.e., $IRVV^v$ to all other members in the same group. Upon receiving the  $IRVV_s^v$ from AS s, an AS j compares with its local BVV. If the $Ver_i^v$ of AS i in $IRVV_s^v$ is greater than $Ver_i^v$ in local $RVV$, then AS j misses at least one new binding message from AS i. In this case, besides simply adopting a newer version, AS j can proactively request missed binding messages from AS s. The rationale is that the missing of prior updates is an indicator of weak or unstable network connectivities for AS j, and therefore the proactive requests are helpful.
@@ -232,6 +225,7 @@ xxx
 
 
 # Acknowledgments
+
 {:numbered="false"}
 
 TODO acknowledge.
