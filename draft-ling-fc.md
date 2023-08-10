@@ -127,8 +127,8 @@ An FC-Tag attribute is added to the BGP_UPDATE message, the upgraded AS should a
 |     +---------------+     +------------+    |
 +---------------------------------------------+
 
-Figure 1: The structure of the FC-Tag attribute.
 ~~~~~~
+{: #fig1: title="The structure of the FC-Tag attribute"}
 
 ## Next-hop AS has deployed the mechanism
 
@@ -143,8 +143,9 @@ When next-hop AS fails to deploy the mechanism, the AS should also generate a ra
 +------+     +------+     +------+     +------+
 | AS A | <-- | AS B | <-- | AS C | <-- | AS D |
 +------+     +------+     +------+     +------+
-Figure 2: The structure of the FC-Tag attribute.
-~~~~~~ -->
+~~~~~~ 
+{: #fig2 title="The structure of the FC-Tag attribute"}
+-->
 
 
 # Revoke the invalid FC
@@ -154,21 +155,30 @@ To avoid an invalid FC being used to announce a BGP_UPDATE message, AS should re
 
 - Revocation Version View. Suppose there are K ASes in the current ecosystem. Each of them maintains a K-dimensional vector named Revocation Version View, i.e. RVV, where the i-th element records the version number of the latest revocation message received from AS i. Specifically, the RVV of AS s is as follows:
 
+~~~~~~~~~~
 RVV_s={{ASN_i,Ver_i}  | i ∈ (1,K)}
+~~~~~~~~~~
+{: #eq-rvv title="Revocation Version View"}
 
 where $ASN_i$ is the AS Number of AS i, and $Ver_i$ is latest version number from AS i
 
 
 - Intra-group Revocation Version View (IG-BVV) is a subset of BVV, and only includes the element records related to the ASes in the same group. Specifically, for an AS s in group k, i.e., the IG-RVV of AS s is as follows:
 
+~~~~~~~
 IG-RVV_s={{ASN_i,Ver_i}  | ASN_i ∈ G_k}
+~~~~~~~
+{: #eq-ig-bvv title="Intra-group Revocation Version View"}
 
 where $G_k$ is a set that includes all ASN of AS in group k.
 
 
 - Incremental Revocation Version View (IRVV) is an incremental format of RVV, tagged with a version number v.
 
+~~~~~~~
 IRVV_j^v={v,{ASN_i,Ver_i^v}  | Ver_i^v>Ver_{i}^{v-1}}
+~~~~~~~
+{: #eq-irvv title="Incremental Revocation Version View"}
 
 where v is the version number of IRVV.
 
