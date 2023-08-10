@@ -17,10 +17,10 @@ v: 3
 # - unicorn
 # - sparkling distributed ledger
 venue:
-  #  group: WG
-  #  type: Working Group
-  #  mail: WG@example.com
-  #  arch: https://example.com/WG
+#  group: WG
+#  type: Working Group
+#  mail: WG@example.com
+#  arch: https://example.com/WG
 
 author:
   -
