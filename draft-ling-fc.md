@@ -129,12 +129,25 @@ To avoid an invalid FC being used to announce a BGP-UPDATE message, AS should re
 
 ## Notations
 
-- Revocation Version View (RVV). Suppose there are K ASes in the current ecosystem. Each of them maintains a K-dimensional vector named Revocation Version View, where the i-th element records the version number of the latest revocation message received from AS i. Specifically, the RVV of AS s is as follows: RVV_s={ { ASN_i,Ver_i}  | i included in (1,K)}, where ASN_i is the AS Number of AS i, and Ver_i is the latest version number from AS i.
+- Revocation Version View (RVV). Suppose there are K ASes in the current ecosystem. Each of them maintains a K-dimensional vector named Revocation Version View, where the i-th element records the version number of the latest revocation message received from AS i. Specifically, the RVV of AS s is as follows:
 
-- Intra-group Revocation Version View (IG-RVV) is a subset of RVV, and only includes the element records related to the ASes in the same group. Specifically, for an AS s in group k, i.e., the IG-RVV of AS s is as follows: IG-RVV_s={ { ASN_i,Ver_i} | ASN_i included in G_k}, where G_k is a set that includes all ASN of AS in group k.
+~~~
+RVV_s={ { ASN_i,Ver_i}  | i included in (1,K)}, where ASN_i is the AS Number of AS i, and Ver_i is the latest version number from AS i.
+~~~
 
-- Incremental Revocation Version View (IRVV) is an incremental format of RVV, tagged with a version number v. IRVV_j^v={v,{ASN_i,Ver_i^v}  | Ver_i^v>Ver_{i}^{v-1}}, where v is the version number of IRVV.
 
+- Intra-group Revocation Version View (IG-RVV) is a subset of RVV, and only includes the element records related to the ASes in the same group. Specifically, for an AS s in group k, i.e., the IG-RVV of AS s is as follows:
+
+~~~
+IG-RVV_s={ { ASN_i,Ver_i} | ASN_i included in G_k}, where G_k is a set that includes all ASN of AS in group k.
+~~~
+
+
+- Incremental Revocation Version View (IRVV) is an incremental format of RVV, tagged with a version number v.
+
+~~~
+IRVV_j^v={v,{ASN_i,Ver_i^v}  | Ver_i^v>Ver_{i}^{v-1}}, where v is the version number of IRVV.
+~~~
 
 ## Broadcast the revocation message
 
