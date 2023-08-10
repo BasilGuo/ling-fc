@@ -59,27 +59,6 @@ normative:
     RFC8205:
 
 informative:
-    kim2014lightweight:
-      title: "Lightweight Source Authentication and Path Validation"
-      target: "https://dl.acm.org/doi/10.1145/2619239.2626323"
-      date: 2014
-      author:
-        - Tiffany Hyun-Jin Kim
-        - Cristina Basescu
-        - Limin Jia
-        - Soo Bum Lee
-        - Yih-Chun Hu
-        - Adrian Perrig
-    legner2020epic:
-      title: "EPIC: Every Packet Is Checked in the Data Plane of a Path-Aware Internet"
-      target: "https://www.usenix.org/conference/usenixsecurity20/presentation/legner"
-      date: 2020
-      author:
-        - Markus Legner
-        - Tobias Klenze
-        - Marc Wyss
-        - Christoph Sprenger
-        - Adrian Perrig
     X.680:
       title: "Information technology -- Abstract Syntax Notation One (ASN.1): Specification of basic notation"
       target: "https://itu.int/rec/T-REC-X.680-202102-I/en"
@@ -105,7 +84,7 @@ This document defines a standard profile for synchronizing Forwarding Commitment
 
 # Introduction
 
-The fundamental cause of the path manipulation attacks in Internet inter-domain routing is that the de facto Border Gateway Protocol (BGP) {{RFC4271}} does not have built-in mechanisms to authenticate routing announcements. As a result, an adversary can announce virtually arbitrary paths to a prefix while the network cannot effectively verify the authenticity of the route  announcements. The most representative solutions given by Internet Engineering Task Force (IETF) are path validation through replacing BGP with BGPsec {{RFC8205}}. Yet BGPsec is not incrementally deployable. It tightly couples the path authentication with the BGP path construction itself, where an AS is required to iteratively verify the signatures of each prior hop before extending the authentication chain with its own approval. As a result, a single legacy AS can terminate the authentication chain, preventing the downstream ASes from reinstating the authentication process. In addition, the performance hit introduced by BGPsec is significant because it has to authenticate the entire path even if only part of the hops is changed. Meanwhile, although path authorization {{kim2014lightweight}}, {{legner2020epic}} is native to path-aware Internet architecture, none of these protocols are fully compatible with BGP. This implies that unless the current Internet routing system experiences a fundamental paradigm shift towards path-aware routing, enforcing path authorization in inter-domain routing is challenging.
+The fundamental cause of the path manipulation attacks in Internet inter-domain routing is that the de facto Border Gateway Protocol (BGP) {{RFC4271}} does not have built-in mechanisms to authenticate routing announcements. As a result, an adversary can announce virtually arbitrary paths to a prefix while the network cannot effectively verify the authenticity of the route  announcements. The most representative solutions given by Internet Engineering Task Force (IETF) are path validation through replacing BGP with BGPsec {{RFC8205}}. Yet BGPsec is not incrementally deployable. It tightly couples the path authentication with the BGP path construction itself, where an AS is required to iteratively verify the signatures of each prior hop before extending the authentication chain with its own approval. As a result, a single legacy AS can terminate the authentication chain, preventing the downstream ASes from reinstating the authentication process. In addition, the performance hit introduced by BGPsec is significant because it has to authenticate the entire path even if only part of the hops is changed. Meanwhile, although path authorization is native to path-aware Internet architecture, none of these protocols are fully compatible with BGP. This implies that unless the current Internet routing system experiences a fundamental paradigm shift towards path-aware routing, enforcing path authorization in inter-domain routing is challenging.
 
 Forwarding Commitment (FC) is a signed object that binds the IP prefix with AS and its next hops, eventually, it could compose and help to validate the path of BGP-UPDATE propagation. However, inserting the FC into BGP-UPDATE messages will introduce performance hits such as BGPsec. This document describes a way to synchronize FC across all on-path ASes without AS_Path leakage, on-path ASes can then verify the FCs and filter the potential malicious BGP routes, which are generated based on previously received BGP-UPDATE messages. To ensure that the FC-synchronization mechanism can be incrementally deployed, this document defines:
 
