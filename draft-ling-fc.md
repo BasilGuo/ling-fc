@@ -133,7 +133,6 @@ To avoid an invalid FC being used to announce a BGP-UPDATE message, AS should re
 
 
 - Intra-group Revocation Version View (IG-RVV) is a subset of RVV, and only includes the element records related to the ASes in the same group. Specifically, for an AS s in group k, i.e., the IG-RVV of AS s is as follows: IG-RVV_s={ASN_i,Ver_i}, where ASN_i is included in G_k, G_k is a set that includes all ASN of AS in group k.
-~~~
 
 
 - Incremental Revocation Version View (IRVV) is an incremental format of RVV, tagged with a version number v. IRVV_j^v={v,{ASN_i,Ver_i^v}}, where v is the version number of IRVV and Ver_i^v is greater than Ver_{i}^{v-1}.
