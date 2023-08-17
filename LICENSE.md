@@ -1,4 +1,4 @@
 # License
 
 See the
-[guidelines for contributions](https://github.com/BasilGuo/ling-fc/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/BasilGuo/fcbgp/blob/main/CONTRIBUTING.md).
