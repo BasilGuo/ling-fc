@@ -44,7 +44,7 @@ author:
     org: Tsinghua University
     city: Beijing
     country: China
-    email: wangxiaoliang0623@foxmail.com 
+    email: wangxiaoliang0623@foxmail.com
 
 normative:
   RFC4271:
@@ -86,14 +86,14 @@ Although FC was initially designed to verify BGP announcement the control plane,
                                \
 AS A-----------AS B-----------AS C
   ^             ^              |
-  |  on-binding |  on-binding  v   
+  |  on-binding |  on-binding  v
   ------<---------------<------+
 ~~~
 {: #figure1 title="Overview"}
 
 ## Binding Message
 
-As mentioned in the previous section, both on-path and off-path nodes receive binding messages as credentials for verification and filtering, with the difference being the presence of an FC list. Based on the FC information received by the control plane, we construct the binding message formats shown in Formulas 1 and 2, respectively. 
+As mentioned in the previous section, both on-path and off-path nodes receive binding messages as credentials for verification and filtering, with the difference being the presence of an FC list. Based on the FC information received by the control plane, we construct the binding message formats shown in Formulas 1 and 2, respectively.
 
             Monpath = {Psrc,Pdst,FClist, Ver,Versub}_Sigsrc --- (1)
 
@@ -154,7 +154,7 @@ The forward binding can be extended to off-path ASes to enable large-scale traff
                           |                       |
                           v                       ^
                  +-------------------+            |
-10.0.0./24       |        Undeployed |        20.0.0.0/24     
+10.0.0./24       |        Undeployed |        20.0.0.0/24
 AS A  -----------|--AS B     Zone  --|--AS C-----AS D
 |                |                   |   |        |
 ^                +-------------------+   ^        |
