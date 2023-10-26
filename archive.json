@@ -1,0 +1,268 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2023-10-26T01:09:56.977242+00:00",
+  "repo": "BasilGuo/fcbgp",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOKFbUf85Xl7Eb",
+      "title": "update: no mathematics equations",
+      "url": "https://github.com/BasilGuo/fcbgp/pull/1",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-08-10T02:29:42Z",
+      "updatedAt": "2023-08-18T08:02:26Z",
+      "baseRepository": "BasilGuo/fcbgp",
+      "baseRefName": "main",
+      "baseRefOid": "d7c9e065aef7d12e74a69a0a3369a6eecaec7610",
+      "headRepository": "BasilGuo/fcbgp",
+      "headRefName": "BasilGuo-errata-no-math",
+      "headRefOid": "7a263305f7fae139b7db6a800679b9d92adc3778",
+      "closedAt": "2023-08-10T03:13:35Z",
+      "mergedAt": "2023-08-10T03:13:35Z",
+      "mergedBy": "BasilGuo",
+      "mergeCommit": {
+        "oid": "c66df8ae2813a6f26556f011b71466dec3f50b6f"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOKFbUf85Xmw8e",
+      "title": "update: errata",
+      "url": "https://github.com/BasilGuo/fcbgp/pull/2",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-08-10T07:09:05Z",
+      "updatedAt": "2023-08-18T08:02:29Z",
+      "baseRepository": "BasilGuo/fcbgp",
+      "baseRefName": "main",
+      "baseRefOid": "04c58e18b9c307db4f78f2923b475313b78e18a4",
+      "headRepository": "BasilGuo/fcbgp",
+      "headRefName": "BasilGuo-errata1",
+      "headRefOid": "7049916e6d883171c414391feb80445f31d35186",
+      "closedAt": "2023-08-16T07:39:36Z",
+      "mergedAt": "2023-08-16T07:39:36Z",
+      "mergedBy": "StoneLing",
+      "mergeCommit": {
+        "oid": "78326d2333c7cf6dadd2411eaddba07bc5c821d0"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOKFbUf85dpzG6",
+          "commit": {
+            "abbreviatedOid": "da139f2"
+          },
+          "author": "BasilGuo",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "Need to remove Math equations. At least to simplify them.",
+          "createdAt": "2023-08-10T07:43:22Z",
+          "updatedAt": "2023-08-10T07:46:17Z",
+          "comments": [
+            {
+              "originalPosition": 119,
+              "body": "```suggestion\r\n\r\n```",
+              "createdAt": "2023-08-10T07:43:22Z",
+              "updatedAt": "2023-08-10T07:46:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKFbUf85d8j-R",
+          "commit": {
+            "abbreviatedOid": "7049916"
+          },
+          "author": "BasilGuo",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-08-14T06:38:49Z",
+          "updatedAt": "2023-08-14T06:38:49Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "**\u9700\u8981\u4fee\u6539\u9898\u76ee\u6216\u8005\u5185\u5bb9\u3002**\r\n\u9898\u76ee\u50cf\u662f\u5728\u5199\u4e00\u4e2a\u57fa\u4e8eRPKI\u7684signed object\uff0c\u548c\u5185\u5bb9\u53c8\u4e0d\u592a\u5339\u914d\u3002\r\n\u5982\u679c\u662f\u5b9a\u4e49RPKI\u7684signed object\uff0c\u90a3\u4e48\u5c31\u9700\u8981\u53c2\u7167RFC6488\u6765\u5199\uff0c\u540c\u65f6\u6a21\u4effASPA\u3001ROA\u3001rfc6482bis\u6765\u5199\u3002\r\n\u5982\u679c\u5185\u5bb9\u4e0d\u53d8\uff0c\u611f\u89c9\u4e5f\u53ef\u4ee5\u53ea\u4fee\u6539\u9898\u76ee\u3002\u6309\u7167\u73b0\u5728\u7684\u6b63\u6587\u5185\u5bb9\uff0c\u611f\u89c9\u66f4\u50cf\u662f\u5728\u5b9a\u4e49\u4e00\u4e2a\u534f\u8bae\u3002",
+              "createdAt": "2023-08-14T06:38:49Z",
+              "updatedAt": "2023-08-14T06:38:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKFbUf85d8ozp",
+          "commit": {
+            "abbreviatedOid": "7049916"
+          },
+          "author": "BasilGuo",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-08-14T06:55:52Z",
+          "updatedAt": "2023-08-14T06:55:52Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "\u9700\u8981\u8bf4\u660e\u5404\u4e2a\u5b57\u6bcd\u7684\u542b\u4e49\u3002\u4f8b\u5982H()\u3001P\u7684\u542b\u4e49\uff0cVer\u7684\u542b\u4e49\u7b49\u3002\r\n\u5bf9\u4e8eFC\u3001FC-TAG\u7b49\u7f29\u5199\uff0c\u53ef\u80fd\u9700\u8981\u5199\u5728\u672f\u8bed\u4e0e\u7f29\u7565\u8bed\u4e00\u8282\u3002\u4e5f\u5c31\u662f`## Requirements Language`\u90a3\u91cc\u3002",
+              "createdAt": "2023-08-14T06:55:52Z",
+              "updatedAt": "2023-08-14T06:56:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKFbUf85d8p3H",
+          "commit": {
+            "abbreviatedOid": "7049916"
+          },
+          "author": "BasilGuo",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-08-14T06:57:57Z",
+          "updatedAt": "2023-08-14T06:57:57Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "\u516c\u5f0f\u6392\u7248\u7684\u95ee\u9898\u53ef\u4ee5\u518d\u7b49\u7b49\u3002",
+              "createdAt": "2023-08-14T06:57:57Z",
+              "updatedAt": "2023-08-14T06:57:57Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOKFbUf85d8qcp",
+          "commit": {
+            "abbreviatedOid": "7049916"
+          },
+          "author": "BasilGuo",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-08-14T06:59:57Z",
+          "updatedAt": "2023-08-14T06:59:58Z",
+          "comments": [
+            {
+              "originalPosition": 176,
+              "body": "\u6211\u53ea\u662f\u89c9\u7740\u8fd9\u6837\u597d\u533a\u5206\u4e00\u4e9b\u3002\u5f88\u591a\u6539\u52a8\u7b97\u662f\u4e0d\u5fc5\u8981\u7684\u3002\ud83d\ude05",
+              "createdAt": "2023-08-14T06:59:57Z",
+              "updatedAt": "2023-08-14T06:59:58Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOKFbUf85YHLpo",
+      "title": "Create draft-huang-fc-dataplane.md",
+      "url": "https://github.com/BasilGuo/fcbgp/pull/3",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2023-08-17T02:30:36Z",
+      "updatedAt": "2023-08-17T02:50:03Z",
+      "baseRepository": "BasilGuo/fcbgp",
+      "baseRefName": "main",
+      "baseRefOid": "78326d2333c7cf6dadd2411eaddba07bc5c821d0",
+      "headRepository": "BasilGuo/fcbgp",
+      "headRefName": "BasilGuo-hhl-fc-dataplane",
+      "headRefOid": "58bba240778774f23b4bf432113dbabd05949490",
+      "closedAt": "2023-08-17T02:50:02Z",
+      "mergedAt": "2023-08-17T02:50:02Z",
+      "mergedBy": "BasilGuo",
+      "mergeCommit": {
+        "oid": "c23b8c3ab71a2ab28b7f51634fb32da52bfbb805"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOKFbUf85YOV-l",
+      "title": "Update draft-huang-fc-dataplane.md",
+      "url": "https://github.com/BasilGuo/fcbgp/pull/4",
+      "state": "MERGED",
+      "author": "BasilGuo",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "update: errata, syntax, grammar, Binding Message format, etc.",
+      "createdAt": "2023-08-18T07:54:29Z",
+      "updatedAt": "2023-08-18T08:10:08Z",
+      "baseRepository": "BasilGuo/fcbgp",
+      "baseRefName": "main",
+      "baseRefOid": "c24af4a44e60de4b0dd73dddcb43e664899f3dc9",
+      "headRepository": "BasilGuo/fcbgp",
+      "headRefName": "BasilGuo-hhl-errata",
+      "headRefOid": "a0c51770ccf802709e1c93e762bc6b9334ef9aac",
+      "closedAt": "2023-08-18T08:10:08Z",
+      "mergedAt": "2023-08-18T08:10:08Z",
+      "mergedBy": "hhlrank",
+      "mergeCommit": {
+        "oid": "81ac835361a13adff8c45b3bd450c677cbd554e7"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
