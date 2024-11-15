@@ -4,7 +4,7 @@ title: "A Profile for Synchronizing Forwarding Commitments (FCs) without AS_PATH
 abbrev: "Forwarding Commitments"
 category: std
 
-docname: draft-ling-fc-latest
+docname: draft-ling-fc-verification-latest
 submissiontype: IETF  # also: "independent", "IAB", or "IRTF"
 number:
 date:
